@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenLife Foundation</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f4f9f4;
+}
+
+/* NAVBAR */
+nav {
+  background: #0a7f2e;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* SECTION */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* FORMS */
+form {
+  background: white;
+  padding: 25px;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 12px;
+  background: #0a7f2e;
+  color: white;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button:hover {
+  background: #066422;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  background: #0a7f2e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+    <!-- SIMPLE LOGO -->
+    <svg width="40" height="40" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="white"/>
+      <path d="M50 20 C30 40, 30 70, 50 80 C70 70, 70 40, 50 20" fill="green"/>
+    </svg>
+    <h2>GREENLIFE
+FOUNDATION</h2>
+  </div>
+
+  <div>
+    <a href="#home">Home</a>
+    <a href="#join">Join</a>
+    <a href="#careers">Careers</a>
+    <a href="#donate">Donate</a>
+    <a href="#partner with us">Partner With Us</a>
+    <a href="#fund us">Fund Our Projects</a>
+    <a href="#plant a tree">Plant A Tree For Life</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div>
+    <h1>Building a Sustainable Future Together 🌍</h1>
+    <p>Empowering communities through environmental action and Green Initiatives</p>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join">
+  <h2>Join GreenLife Foundation</h2>
+  <form id="signup">
+    <input type="text" placeholder="Full Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="email" placeholder="Email Address" required>
+
+    <!-- Password Field -->
+    <div style="position:relative;">
+      <input id="password" type="password" placeholder="Create Password" required style="width:100%; padding-right:40px;">
+      <button type="button" onclick="togglePassword('password')" style="position:absolute; right:5px; top:5px;">👁️</button>
+    </div>
+
+    <!-- Confirm Password Field -->
+    <div style="position:relative;">
+      <input id="confirmPassword" type="password" placeholder="Confirm Password" required style="width:100%; padding-right:40px;">
+      <button type="button" onclick="togglePassword('confirmPassword')" style="position:absolute; right:5px; top:5px;">👁️</button>
+    </div>
+
+    <button type="submit">Sign Up</button>
+    <p id="msg" style="color:red;"></p>
+  </form>
+  <br>
+  <button onclick="guest()">Continue as Guest</button>
+</section>
+
+<!-- CAREERS -->
+<section id="careers">
+  <h2>Careers</h2>
+
+  <div class="card">🌱 Volunteer</div>
+  <div class="card">🌳 Tree Coordinator</div>
+  <div class="card">📢 Outreach Officer</div>
+  <div class="card">🔫 Green Army</div>
+  <div class="card">🚔 Environmental Scout</div>
+
+  <br><br>
+
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email">
+    <select>
+      <option>Select Role</option>
+      <option>Volunteer</option>
+      <option>Tree Coordinator</option>
+      <option>Outreach Officer</option>
+      <option>Green Army</option>
+      <option>Environmental Scout</option>
+    </select>
+    <button onclick="apply()">Apply</button>
+  </form>
+</section>
+
+<!-- MOVEMENT -->
+<section>
+  <h2>Join the Movement 🌱</h2>
+  <p>Be part of our environmental change and sustainability action.</p>
+
+  <form>
+    <input type="text" placeholder="Your Full Name">
+    <input type="email" placeholder="Email">
+    <button onclick="movement()">Join Now</button>
+  </form>
+</section>
+
+<!-- DONATION -->
+<section id="donate">
+  <h2>Support Our Work 💚</h2>
+
+  <div class="card">
+    <h3>M-Pesa Donation</h3>
+    <p>Send to:</p>
+    <h2>+254794699288</h2>
+    <p>Name: GreenLife Foundation</p>
+  </div>
+
+  <br>
+  <button onclick="donate()">I Have Donated</button>
+</section>
+
+<footer>
+  <p>©All Rights Reserved:GreenLife Foundation 2026</p>
+  <p>Facebook | YouTube | Twitter</p>
+</footer>
+
+<script>
+
+// SIGNUP
+document.getElementById("signup").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("msg").innerText = "✅ Welcome to GreenLife!";
+});
+
+// FUNCTIONS
+function guest(){
+  alert("Welcome To Our Guest Mode 🌍");
+}
+
+function apply(){
+  alert("Application submitted Successfully!");
+}
+
+function movement(){
+  alert("You joined the movement 🌱");
+}
+
+function donate(){
+  alert("Thank you for supporting Our Movement 💚");
+}
+
+</script>
+
+</body>
+</html>
